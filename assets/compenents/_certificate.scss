@@ -1,0 +1,75 @@
+.certificate {
+    &__title  {
+        margin-top: 63px;
+        @include font (300, 64px, 64px, $grayfour);
+        text-transform: uppercase;
+    }
+    &__nick {
+        @include font (700, 64px, 64px, $grayone);
+    }
+    &__wrapper {
+        margin-top: 42px;
+        padding-bottom: 120px;
+        position: relative;
+    }
+   
+    &__pagination {
+        @include font (400, 24px, 24px, $grayfour);
+        position: absolute;
+        right: 160px;
+        bottom: 15px;
+        width: auto;
+        left: auto;
+    }
+    &__prev,
+    &__next {
+        position: absolute;
+    }
+    &__prev {
+        bottom: 0;
+        right: 75px;
+    }
+    &__next {
+        right: 0;
+        bottom: 0;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .certificate__item {
+        margin: 0 auto;
+        display: flex;
+    }
+}
+@media screen and (max-width:670px) {
+    .certificate {
+        &__title,
+        &__nick {
+            font-size:35px;
+            line-height: 35px;
+        }
+        &__item {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
+@media screen and (max-width:430px) {
+    .certificate {
+        &__pagination {
+            right: 80px;
+            bottom: 80px;
+        }
+        &__prev {
+            right: 140px;
+        }
+        &__next {
+            right: 55px;
+        }
+        &__title,
+        &__nick {
+            font-size: 25px;
+        }
+    }
+}

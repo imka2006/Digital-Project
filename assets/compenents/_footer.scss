@@ -1,0 +1,120 @@
+.footer {
+    margin-top: 120px;
+    background: #2c2c2c;
+    width: 100%;
+    &__content {
+        padding-top: 58px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        padding-bottom: 25px;
+        @include font (700, 16px, 20px, $white);
+    }
+    &__li {
+        margin-bottom: 16px;
+        @include font (500, 14px, 24px, $white);
+        position: relative;
+    }
+    &__li::after {
+        content: "";
+        position: absolute;   
+        background: $white;
+        width: 2px;
+        height:0;
+        left: -8px;
+    }
+    &__li:hover::after {
+        height: 100%;
+        transition: .5s;
+    }
+    &__first--img {
+        margin-top: -145px;
+    }
+    &__address {
+        @include font (500, 14px, 24px, $white);
+    }
+    &__img {
+        margin-right: 14px;
+    }
+    &__third--address {
+        padding-bottom: 88px;
+    }
+    &__link {
+        @include font (500, 14px, 24px, $white);
+    }
+    &__gmail {
+        margin-top:32px;
+    }
+    &__link--img {
+        margin-right: 40px;
+    }
+}
+.line {
+    margin-top: 60px;
+    width: 100%;
+    height: 1px;
+    background:#C8C8C8;
+}
+.save {
+    @include font (400, 12px, 22px,rgba(200, 200, 200, 0.5));
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+
+@media screen and (max-width:1000px) {
+   .footer {
+    &__content {
+        flex-wrap: wrap;
+        max-width: 680px;
+    }
+    &__fourth--title {
+        margin-top: -150px;
+    }
+   }
+
+}
+@media screen and (max-width:750px) {
+   .footer {
+    &__content {
+        flex-wrap: wrap;
+        max-width: 400px;
+    }
+    &__fourth--title {
+       margin-top: 50px;
+    }
+    &__third {
+        margin-top: -130px;
+    }
+    &__third--title {
+        margin-bottom: -10px;
+    }
+    &__third--address {
+        padding-bottom: 20px;
+    }
+    &__gmail {
+        padding-top: -20px;
+    }
+   }
+}
+@media screen and (max-width:550px) {
+    .footer {
+        &__content {
+            max-width: 230px;
+        }
+        &__first--img {
+            padding-top: 200px;
+        }
+        &__third {
+            margin-top: 70px;
+        }
+        &__second {
+            margin-top: 30px;
+        }
+        &__link--img{
+            margin-right: 20px;
+        }
+    }
+}

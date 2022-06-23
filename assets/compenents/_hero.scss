@@ -1,0 +1,223 @@
+.hero {
+    &__title {
+        @include font (300, 64px, 64px, $grayfour);
+        margin-top: 336px;
+    }
+
+    &__title--max {
+        @include font (700, 64px, 64px, $grayone);
+        margin-right: 69px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__hight {
+        filter: invert(1);
+    }
+    &__fon {
+        position: relative;
+    }
+
+    &__btn {
+        padding: 24px 49px;
+        position: absolute;
+        bottom: 0;
+        left: -1px;
+    }
+
+    &__name {
+        position: relative;
+    }
+
+    &__prev {
+        position: absolute;
+        bottom: 225px;
+    }
+
+    &__next {
+        position: absolute;
+        bottom: 225px;
+        left: 74px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .hero {
+        margin: 0 auto;
+
+        &__content {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__fon {
+            max-width: 100%;
+        }
+        &__btn {
+            left: 149px;
+        }
+        &__next {
+            position: absolute;
+            bottom: 20px;
+            left: 455px;
+        }
+        &__prev {
+            position: absolute;
+            bottom: 20px;
+            left: 360px;
+        }
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            z-index: -1 ;
+            position: absolute;
+            left: 235px;
+            bottom: 100px;
+        }
+        &__title {
+            margin-top: 80px;
+        }
+        &__wrapper {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}
+@media screen and (max-width:860px) {
+    .hero {
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            position: absolute;
+            bottom: 90px;
+            left: 170px;
+        }
+        .swiper-pagination::before {
+            left: 170px;
+        }
+        &__next {
+            left: 380px;
+            bottom: 5px;
+        }
+        &__prev {
+            left: 290px;
+            bottom: 5px;
+        }
+        &__fon {
+            width:500px;
+        }
+        &__title--max {
+            font-size: 50px;
+            line-height: 50px;
+        }
+        &__title {
+            font-size: 50px;
+            line-height: 60px;
+            margin-right: 50px;
+        }
+        &__btn {
+            left:317px;
+        }
+    }
+}
+
+@media screen and (max-width:670px) {
+    .hero {
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            position: absolute;
+            bottom: -60px;
+            left: -110px;
+        }
+        &__wrapper {
+            margin-top: 80px;
+        }
+        &__fon {  
+            width: 435px;
+        }
+        &__prev {
+            left: 185px;
+            bottom: -75px;
+        }
+        &__next {
+            left: 275px;
+            bottom: -75px;
+        }
+        .swiper-pagination::before {
+            left: 165px;
+        }
+    }
+    
+}
+@media screen and (max-width:550px) {
+    .hero {
+        &__wrapper {
+            margin-top: 160px;
+        }
+        &__prev {
+            left: 55px;
+            bottom: -140px;
+        }
+        &__next {
+            left: 145px;
+            bottom: -140px;
+        }
+        &__fon {
+            width: 300px;
+        }
+        &__title {
+            margin: 80px auto 0;
+            text-align: center;
+        }
+        &__title--max {
+            margin-right: 0;
+        }
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            left:0px;
+        }
+        .swiper-pagination::before {
+            left: 110px;
+        }
+        &__btn {
+            left: 384px;
+        }
+    }
+}
+@media screen and (max-width:430px) {
+    .hero {
+        &__title {
+            font-size: 35px;
+            line-height: 40px;
+            margin-top: 50px;
+        }
+        &__title--max {
+            font-size: 40px;
+            line-height: 40px;
+        }
+        .swiper-pagination-bullets.swiper-pagination-horizontal {
+            position: absolute;
+            bottom: -60px;
+            left: 0px;
+        }
+        .test0{
+            margin-right: 30px;
+        }
+        .test1{
+            margin-left: 30px;
+        }
+        .swiper-pagination::before {
+            left: 85px;
+        }
+        &__fon {
+            width: 250px;
+        }
+        &__btn {
+            padding: 15px 30px;
+            left: 410px;
+            bottom: 4px;
+        }
+        &__prev {
+            left: 40px;
+        }
+        &__next {
+            left: 110px;
+        }
+    }
+}

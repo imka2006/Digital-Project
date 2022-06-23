@@ -1,0 +1,134 @@
+.project {
+    &__content {
+        position: relative;
+        padding-bottom: 90px;
+    }
+    &__title {
+        margin-top: 63px;
+        @include font (400, 64px, 64px, $grayfour);
+    }
+    &__nick {
+        @include font (700, 64px, 64px, $grayone);
+    }
+    &__item {
+        margin-top: 30px;
+        display: flex;
+        width:1170px;
+        background: #fafafa;
+    }
+    &__info {
+        margin-left: 30px;
+    }
+    &__item--title {
+        @include font (300, 40px, 49px, $grayfour);
+        max-width: 440px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    &__text {
+        @include font (300, 16px, 25px, $black);
+        max-width: 400px;
+        margin-bottom: 64px;
+    }
+    &__btn {
+        padding:24px 52px;
+    }
+    &__pagination {
+        position: absolute;
+        @include font (499, 24px, 24px,#BDBDBD);
+        width: auto;
+        bottom: 15px;
+    }
+    &__prev,
+    &__next {
+        position: absolute;
+        bottom: 0;
+    }
+    &__prev {
+        left: 150px;
+    }
+    &__next {
+        left: 220px;
+    }
+}
+
+@media screen and (max-width:1360px) {
+    .project {
+        &__item {
+            max-width: 100%;
+            flex-wrap: wrap;
+            margin-top: 90px;
+        }
+        &__photo {
+            margin: 45px auto;
+        }
+        &__info {
+            margin: 0 auto;
+            text-align: center; 
+        }
+        &__item--title {
+            max-width: 550px;
+        }
+        &__text {
+            margin:0 auto;
+        }
+        &__btn {
+            margin: 30px auto;
+        }
+    }
+    
+}
+@media screen and (max-width:860px) {
+    .project {
+        &__photo {
+            max-width: 100%;
+           margin: 0 auto;
+        }
+        &__item--title {
+            font-size: 25px;
+        }
+        &__text {
+            font-size: 15px;
+        }
+        &__item {
+            margin-top: 30px;
+        }
+       
+    }
+}
+@media screen and (max-width:550px) {
+    .project {
+        &__item--title {
+            line-height: 18px;
+            font-size: 18px;
+        }
+        &__title,
+        &__nick {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        &__text {
+            max-width: 220px;
+        }
+        .line {
+            margin-top: 30px;
+        }
+    }
+}
+@media screen and (max-width:430px) {
+    .project {
+        &__content {
+            padding-bottom: 150px;
+        }
+        &__pagination {
+            bottom: 95px;
+            left: 80px;
+        }
+        &__prev {
+            left: 60px;
+        }
+        &__next {
+            left: 140px;
+        }
+    }
+}

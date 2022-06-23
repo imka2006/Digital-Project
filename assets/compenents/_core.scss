@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'TT Hoves';
+
+}
+ul{
+    margin: 0 ;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+li{
+    margin: 0 ;
+    padding: 0;
+    list-style: none;
+    // cursor: pointer;
+}
+.isalm {
+    color: red;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}    
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+button {
+    cursor: pointer;
+    border: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.btn__black {
+    background: $black;
+}
+.black__line {
+    margin-left: 12px;
+}
+.swiper-wrapper {
+    width: 1070px;
+}
+.swiper__button--prev {
+    content: '';
+    width: 53px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include btn (53px, 53px, $white);
+    border-radius: 1px;
+    border: 1px solid #f2f2f2;
+}
+
+.swiper__button--next {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include btn (53px, 53px, $white);
+    border-radius: 1px;
+    border: 1px solid #f2f2f2;
+}
+.swiper__button--next:hover,
+.swiper__button--prev:hover {
+    background: #f9f9f9;
+}
+.swiper-pagination {
+    @include font (300, 24px, 24px, $grayfour);
+    width: auto;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+.black__line {
+    margin-left: 12px;
+}
+.white__line {
+    margin-left: 12px;
+}
+.btn__white {
+    background: $white;
+    position: relative;
+}
+.btn__white::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.3);
+    transition: all 2s ease 0s;
+}
+.btn__white:hover::before {
+    width: 100%;
+    transition: 1s;
+}
+.title {
+    @include font (300, 64px, 64px, $grayfour );
+}
+.swiper-pagination-current {
+    margin-right: 25px;
+}
+.swiper-pagination-total {
+    margin-left: 25px;
+
+}
+.swiper-pagination::before  {
+    @include btn (43px, 1px, #E0E0E0);
+    transform: matrix(-0.71, 0.71, -0.71, -0.71, 0, 0);
+    content: "";
+    position: absolute;
+    left: 180px;
+    bottom: 10px;
+}
+.test0 {
+    margin-right:45px;
+}
+.test1 {
+    margin-left:45px;
+}
+.swiper-pagination-current {
+    color: $grayone;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: absolute;
+    left: -130px;
+    bottom: 100px;
+}
+@media screen and (max-width:1200px) {
+    .container {
+        padding: 0 30px ;
+        max-width: 1170px;
+    }
+}
